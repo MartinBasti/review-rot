@@ -33,7 +33,7 @@ jq --argjson authors "${authors}" --argjson bots "${bots}" -r '[
         (.url | contains("/build-team/")) or
         (
 	  ([.user] | inside($bots)) and
-	  (.url | test ("build-definitions|build-service|cachi2|cachito|atomic-reacotr|osbs-client|dockerfile-parse|koji-containerbuild|osbs-docs|pyarn|ansible-role"))
+	  (.url | test ("build-definitions|build-service|image-controller|cachi2|cachito|atomic-reacotr|osbs-client|dockerfile-parse|koji-containerbuild|osbs-docs|pyarn|ansible-role"))
         )
     )
 ]'

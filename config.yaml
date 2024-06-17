@@ -6,9 +6,10 @@ git_services:
   - konflux-ci/build-definitions
   - redhat-appstudio/book
   - redhat-appstudio/docs.appstudio.io
-  - redhat-appstudio/e2e-tests
+  - konflux-ci/e2e-tests
   - redhat-appstudio/infra-deployments
   - konflux-ci/build-service
+  - konflux-ci/image-controller
   - containerbuildsystem/cachito
   - containerbuildsystem/cachi2
   - containerbuildsystem/atomic-reactor
