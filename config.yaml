@@ -8,12 +8,17 @@ git_services:
   - redhat-appstudio/docs.appstudio.io
   - redhat-appstudio/e2e-tests
   - redhat-appstudio/infra-deployments
-  - konflux-ci/integration-service
-  - konflux-ci/integration-examples
-  - konflux-ci/konflux-test
-  - konflux-ci/clair-in-ci-db
-  - konflux-ci/integration-service-utils
-  - konflux-ci/docs
+  - konflux-ci/build-service
+  - containerbuildsystem/cachito
+  - containerbuildsystem/cachi2
+  - containerbuildsystem/atomic-reactor
+  - containerbuildsystem/osbs-client
+  - containerbuildsystem/pyarn
+  - containerbuildsystem/dockerfile-parse 
+  - containerbuildsystem/koji-containerbuild
+  - containerbuildsystem/osbs-docs
+  - containerbuildsystem/ansible-role-osbs-remote-hosts
+  - containerbuildsystem/ansible-role-osbs-namespace
   - redhat-appstudio/tenants-config
   token: "${GITHUB_TOKEN}"
   type: github

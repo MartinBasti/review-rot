@@ -3,20 +3,26 @@ set -euo pipefail
 
 authors='[
   "MartinBasti",
-  "Josh-Everett",
-  "kasemAlem",
-  "dirgim",
-  "hongweiliu17",
-  "dheerajodha",
-  "sonam1412",
-  "jsztuka",
-  "14rcole",
-  "hacbs-test-bot"
+  "tkdchen",
+  "chmeliik",
+  "brunoapimentel",
+  "stuartwdouglas",
+  "mmorhun",
+  "mkosiarc",
+  "rcerven",
+  "tisutisu",
+  "taylormadore",
+  "ben-alkov",
+  "lkolacek",
+  "eskultety",
+  "slimreaper35",
+  "ianrochapg"
 ]'
 
 bots='[
   "dependabot[bot]",
-  "renovate[bot]"
+  "renovate[bot]",
+  "rh-tap-build-team[bot]"
 ]'
 
 
@@ -24,10 +30,10 @@ bots='[
 jq --argjson authors "${authors}" --argjson bots "${bots}" -r '[
     .[] | select(
         ([.user] | inside($authors)) or
-        (.url | contains("/test-team/")) or
+        (.url | contains("/build-team/")) or
         (
 	  ([.user] | inside($bots)) and
-	  (.url | test ("build-definitions|integration-service|integration-examples|hacbs-test|clair-in-ci-db"))
+	  (.url | test ("build-definitions|build-service|cachi2|cachito|atomic-reacotr|osbs-client|dockerfile-parse|koji-containerbuild|osbs-docs|pyarn|ansible-role"))
         )
     )
 ]'
